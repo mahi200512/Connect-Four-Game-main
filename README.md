@@ -18,3 +18,35 @@ Grid Size: The game can be played on larger or smaller grids, although the stand
 Winning Requirement: Players can adjust the number of discs required to win (e.g., Connect Five) for a longer or shorter game.
 Starting Player: Some variations allow the starting player to alternate between games.
 Connect Four is a strategic game that requires players to anticipate their opponent's moves while planning their own to achieve victory. It combines elements of strategy, observation, and pattern recognition, making it a popular choice for players of all ages.
+
+The explaination of the code is as follows:
+Let's break down the code into different sections:
+
+1. *Imports and Constants*: The code starts by importing necessary libraries such as pygame, sys, math, random, time, and itertools. It also defines constants like the dimensions of the game board, colors, and various parameters for the game.
+
+2. *Board Representation and Functions*: 
+   - create_board(): Creates a 2D array representing the game board.
+   - is_valid_location(): Checks if a column is a valid move.
+   - get_next_open_row(): Finds the next available row for a piece to drop.
+   - drop_piece(): Drops a piece onto the board.
+   - game_over_check(): Checks if the game is over (someone wins or the board is full).
+
+3. *Enums and Classes*: 
+   - Difficulty: Enumerates the difficulty levels for the AI.
+   - Button: Defines a button class for the GUI interface.
+
+4. *ConnectFour Class*: 
+   - Initializes the game, handles mouse input events, manages the game loop, and controls AI moves based on the chosen difficulty level.
+
+5. *Drawing Functions*: 
+   - draw_board(): Draws the game board.
+   - draw_dotted_circle(): Draws a dotted circle for the player's piece.
+
+6. *AI Functions*: 
+   - pick_best_move(): Determines the best move for the AI based on the current board state and the chosen difficulty level.
+   - minimax(): Implements the minimax algorithm for AI decision-making.
+   - score_position() and evaluate_window(): Evaluate the current board position and assign scores based on the number of player or AI pieces in a row.
+
+7. *Main Function*: Sets up the Pygame window, initializes the game, and enters the main game loop.
+
+Overall, the code creates a playable Connect Four game with both player and AI functionality, allowing the player to choose from different difficulty levels. The AI uses the minimax algorithm to make strategic moves based on the current board state.
